@@ -57,4 +57,13 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void LoadLevelSelect()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 }
