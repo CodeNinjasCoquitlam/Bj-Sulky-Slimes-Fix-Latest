@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     public int activeScene;
     public int nextScene;
-
+    public int nexytScene;
     public bool paused = false;
 
     public GameObject PauseMenYouScren;
@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     {
         activeScene = SceneManager.GetActiveScene().buildIndex;
         nextScene = activeScene + 1;
+        nexytScene = nextScene;
     }
 
     void Update()
@@ -42,6 +43,7 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevel()
     {
+        PlayerPrefs.SetInt("LevelIndex", nexytScene -= 2);
         SceneManager.LoadScene(nextScene);
     }
 
